@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Website examples
 
 1. pocketsquaredesign.net
@@ -7,3 +8,9 @@ Website examples
 5. www.rleonardi.com/interactive-resume
 6. muse.adobe.com
 7. melaniedaveid.com
+8. http://doamaral.com
+=======
+Design examples: s
+- http://www.voetsdesign.com
+- 
+>>>>>>> Stashed changes
