@@ -1,54 +1,89 @@
+body, html {
+	overflow-x: hidden;
+	margin: 0;
+}
+
 video {
-	width: 100%;
-	height: auto;
+	min-height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
-.black-layer {
+.video-layer {
 	width: 100%;
 	height: 100%;
-	opacity: 0.6;
+	opacity: 0.4;
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-color: black;
+	background-color: #ecebe6;
 	z-index: 3;
 	text-align: center;
 	vertical-align: middle;
+}
+
+.nav {
+	width: 5%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	margin: 0;
+	background-color: #2e2c2f;
+	z-index: 100;
+	-moz-transition: 0.3s width ease-in-out;
+	-o-transition: 0.3s width ease-in-out;
+	-webkit-transition: 0.3s width ease-in-out;
+	transition: 0.3s width ease-in-out;
+}
+
+.nav:hover {
+	width: 15%;
+	cursor: pointer;
+}
+
+.nav:hover + #content {
+	width: 85%;
+	-moz-transition: 0.3s width ease-in-out;
+	-o-transition: 0.3s width ease-in-out;
+	-webkit-transition: 0.3s width ease-in-out;
+	transition: 0.3s width ease-in-out;
+}
+
+.nav > img {
+	width: 80%;
+	height: auto;
+	float: left;
+	margin-top: .5em;
+}
+
+.content {
+	width: 95%;
+	height: 100%;
+	bottom: 0;
+	top: 0;
+	margin: 0;
+	margin-left: 5%;
+	background-color: #932626;
+	float: right
 }
 
 .iam-logo {
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: 300px;
+	top: 33%;
 	z-index: 4;
 	text-align: center;
 	vertical-align: middle;
+	opacity: 0.8;
 }
 
-.nav {
-	width: 100%;
-	height: 8%;
-	position: fixed;
-	bottom: 0;
-	background-color: #646d74;
-	z-index: 100;
-	left: 0;
-}
-.nav > img {
-	width: auto;
-	height: 100%;
-    float: left:
-}
-
-.intro {
-    height: 100%; 
-    width: 50%; 
-    bottom: 0;
-    float: right; 
-    text-align: center;
-    
+.abc {
+	background-color: blue;
+	width: 200px;
+	height: 100px;
+	float: left;
 }
