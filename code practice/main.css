@@ -38,8 +38,17 @@ video {
 	z-index: 100;
 	left: 0;
 }
-
 .nav > img {
 	width: auto;
 	height: 100%;
+    float: left:
+}
+
+.intro {
+    height: 100%; 
+    width: 50%; 
+    bottom: 0;
+    float: right; 
+    text-align: center;
+    
 }
