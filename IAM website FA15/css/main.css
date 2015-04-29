@@ -154,6 +154,36 @@ video {
 	z-index: 5;
 }
 
+.content-left >.about-content-left {
+    font-family: "lato", sans-serif; 
+    font-size: 40px; 
+    font-weight: 300;
+    background-color: #fbfcfc ;
+    height: 100%;
+    width: auto;
+    top: 0;
+    text-align: left;
+    padding-left: 20%;
+    margin: 0;
+    word-spacing: 10px;
+    padding-top: 10%;
+    
+}
+ul {
+    list-style-type: none;
+    line-height: 200%;
+    font-family: "PT sans Caption", sans-serif;
+ 
+}
+ul > p {
+    text-align: left;
+    font-size: 40px;
+    line-height: 240%;
+}
+ul > li { 
+    line-height: 240%;
+    font-size: 15px;
+}
 .content-right {
 	width: 60%;
 	height: 100%;
