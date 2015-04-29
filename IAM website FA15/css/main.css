@@ -156,9 +156,8 @@ video {
 
 .content-left >.about-content-left {
     font-family: "PT Sans Caption", sans-serif; 
-    font-size: 40px; 
     font-weight: 300;
-    background-color: #fbfcfc ;
+    background-color: #fbfcfc;
     height: 100%;
     width: auto;
     top: 0;
@@ -191,12 +190,31 @@ ul > li:hover{
 ul > li:active { 
     color: #fcb040; 
 }
+
 .content-right {
 	width: 60%;
 	height: 100%;
 	float: right;
-	background-color: blue;
+	background-color: white;
 	z-index: 5;
+}
+.content-right >.about-content-right-1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    font-family: "PT Sans Caption", sans-serif; 
+    font-weight: 300;
+    background-color: #fbfcfc ;
+    text-align: left;
+    margin: 0;
+    word-spacing: 0.5px;
+    padding-top: 10%; 
+    padding-left: 5%;
+}
+
+.content-right >.about-content-right-1 > p {
+    width: 50%;
+    margin-right: 150px;
 }
 
 #iam-logo {
