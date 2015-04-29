@@ -55,10 +55,10 @@ video {
 	width: 80%;
 	height: auto;
 	margin-bottom: 72.5px;
-	-moz-transition: 0.3s margin-bottom ease-in-out;
-	-o-transition: 0.3s margin-bottom ease-in-out;
-	-webkit-transition: 0.3s margin-bottom ease-in-out;
-	transition: 0.3s margin-bottom ease-in-out;
+	-moz-transition: 0.35s margin-bottom ease-in-out;
+	-o-transition: 0.35s margin-bottom ease-in-out;
+	-webkit-transition: 0.35s margin-bottom ease-in-out;
+	transition: 0.35s margin-bottom ease-in-out;
 }
 
 .nav > .nav-icons {
@@ -69,10 +69,10 @@ video {
 
 .nav:hover > img {
 	margin-bottom: 0;
-	-moz-transition: 0.3s margin-bottom ease-in-out;
-	-o-transition: 0.3s margin-bottom ease-in-out;
-	-webkit-transition: 0.3s margin-bottom ease-in-out;
-	transition: 0.3s margin-bottom ease-in-out;
+	-moz-transition: 0.35s margin-bottom ease-in-out;
+	-o-transition: 0.35s margin-bottom ease-in-out;
+	-webkit-transition: 0.35s margin-bottom ease-in-out;
+	transition: 0.35s margin-bottom ease-in-out;
 }
 
 .nav > .nav-icons > .icon {
@@ -101,7 +101,7 @@ video {
 }
 
 .nav > .nav-icons > .icon:hover > p {
-	color: aquamarine;
+	color: #80ffd4;
 }
 
 .nav > .nav-icons > .icon > img {
