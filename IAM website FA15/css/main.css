@@ -130,7 +130,6 @@ video {
 	margin: 0;
 	margin-left: 50px;
 	z-index: 10;
-	background-color: red;
 	display: inline-block;
 	position:fixed;
 	float: right;
@@ -232,6 +231,24 @@ ul > li:active {
     font-size: 15px;
     margin-right: 150px;
 
+}
+.content-left >.contact-content-left {
+    background-color: #fbfcfc;
+    
+}
+.content-left>.contact-content-left> p {
+     text-align: left;
+    font-size: 40px;
+    line-height: 200%;
+    padding-left: 20%;
+ font-family: "PT Sans Caption", sans-serif;
+    
+}
+.content-left>.contact-content-left>ul {
+    list-style-type: none;
+    line-height: 200%;
+    padding-left: 20%;
+    font-family: "PT Sans Caption", sans-serif
 }
 
 #iam-logo {
