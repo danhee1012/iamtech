@@ -1,6 +1,6 @@
 body, html {
 	overflow-x: hidden;
-		overflow-y: hidden;
+	overflow-y: hidden;
 	margin: 0;
 }
 
@@ -237,6 +237,7 @@ video {
 	font-size: 2em;
 	cursor: pointer;
 }
+
 .content-left >.contact-content-left {
 	background-color: #f8f9f9;
 

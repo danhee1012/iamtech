@@ -17,14 +17,22 @@ $(document).ready(function() {
 	);
 
 	$('#about1').click(function() {
-		$(this).addClass("list-active");
-		$(this).siblings('#about2').removeClass("list-active");
+		$(this).animate({
+			color: '#fcb040'
+		});
+		$(this).siblings('#about2').animate({
+			color: 'black'
+		});
 		$(".about-content-right-1").css("display","inline-block");
 		$(".about-content-right-2").css("display","none");
 	});
 	$('#about2').click(function() {
-		$(this).addClass("list-active");
-		$(this).siblings('#about1').removeClass("list-active");
+		$(this).animate({
+			color: '#fcb040'
+		});
+		$(this).siblings('#about1').animate({
+			color: 'black'
+		});
 		$(".about-content-right-2").css("display","inline-block");
 		$(".about-content-right-1").css("display","none");
 	});
