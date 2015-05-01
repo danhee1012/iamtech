@@ -1,11 +1,12 @@
 body, html {
 	overflow-x: hidden;
+		overflow-y: hidden;
 	margin: 0;
 }
 
 video {
 	width: auto;
-	min-height: 100%;
+	height: 110%;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -151,8 +152,11 @@ video {
 	float: left;
 	z-index: 5;
 	font-family: "PT Sans Caption", sans-serif; 
-	font-weight: 300;
-	background-color: #fbfcfc;
+	font-weight: 200;
+}
+
+.bg-left {
+	background-color: #f8f9f9;
 }
 
 .list-active {
@@ -164,7 +168,14 @@ video {
 	height: 100%;
 	float: right;
 	z-index: 5;
-	/*background-color: blue;*/
+	font-family: "Lato", sans-serif; 
+	font-weight: 300;
+	left: 0;
+	padding-top: 60px;
+}
+
+.right-display-none {
+	display: none;
 }
 
 .about-content-left {
@@ -175,33 +186,33 @@ video {
 	padding-left: 15%;
 	margin: 0;
 	word-spacing: 0.5px;
-	padding-top: 10%;
+	padding-top: 20px;
 }
 
-.about-content-left > h3 {
+.content-left h3 {
 	text-align: left;
-	font-size: 40px;
+	font-size: 4.5em;
 	line-height: 200%;
+	letter-spacing: 10px;
 	padding-left: 10%
+}
+
+.about-content-right p {
+	left: 0;
+	width: 50%;
+	font-size: 1em;
+	margin-right: 150px;
 }
 
 .about-content-right-1 {
 	width: 100%;
 	height: 100%;
 	top: 0;
-	font-family: "PT Sans Caption", sans-serif; 
-	font-weight: 300;
 	text-align: left;
 	margin: 0;
 	word-spacing: 0.5px;
 	padding-top: 10%; 
 	padding-left: 5%;
-}
-
-.about-content-right-1 > p {
-	width: 50%;
-	font-size: 1em;
-	margin-right: 150px;
 }
 
 .about-content-right-2 {
@@ -210,46 +221,44 @@ video {
 	margin: 0;
 	padding-top: 10%; 
 	padding-left: 5%;  
-	font-family: "PT Sans Caption", sans-serif; 
-	font-weight: 100;
 	text-align: left;
 	display: none;
-}
-
-.about-content-right-2 > p {
-	width: 50%;
-	font-size: 1em;
-	margin-right: 150px;
 }
 
 .list {
 	list-style-type: none;
 	line-height: 200%;
-
+	padding: 0;
+	padding-left: 10%;
 }
 
 .list > li { 
 	line-height: 240%;
-	font-size: 1em;
+	font-size: 2em;
 	cursor: pointer;
 }
 .content-left >.contact-content-left {
-    background-color: #fbfcfc;
-    
+	background-color: #f8f9f9;
+
 }
-.content-left>.contact-content-left> p {
-     text-align: left;
-    font-size: 40px;
-    line-height: 200%;
-    padding-left: 20%;
- font-family: "PT Sans Caption", sans-serif;
-    
+
+.content-left >.contact-content-left> p {
+	text-align: left;
+	font-size: 40px;
+	line-height: 200%;
+	padding-left: 20%;
+	font-family: "PT Sans Caption", sans-serif;
 }
-.content-left>.contact-content-left>ul {
-    list-style-type: none;
-    line-height: 200%;
-    padding-left: 20%;
-    font-family: "PT Sans Caption", sans-serif
+
+.content-left >.contact-content-left > ul {
+	list-style-type: none;
+	line-height: 200%;
+	padding-left: 20%;
+	font-family: "PT Sans Caption", sans-serif
+}
+
+.contact-us {
+	color: #fcb040;
 }
 
 #iam-logo {
