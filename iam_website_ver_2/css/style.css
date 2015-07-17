@@ -1,0 +1,461 @@
+/*
+style.css
+IAM Main Website Ver 2
+Tech Team Director: Christopher Choi
+UI/UX Designer: Sarah Minkyoung Cho
+Web Developer: Lijin Guo
+*/
+
+body {
+	padding: 0 !important;
+	margin:0 !important;
+	font-family: "Open Sans";
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Open Sans", "san-serif";
+	font-size: 50px;
+	font-weight: 800;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-family: "Open Sans", "san-serif";
+	font-size: 15px;
+	font-weight: 800;
+	margin-left: 30px;
+}
+
+h3 {
+	font-family: "Open Sans", "san-serif";
+	font-size: 15px;
+	font-weight: 800;
+	margin-left: 30px;
+	color:white;
+}
+
+h4 {
+	font-family: "Open Sans", "san-serif";
+	color:white;
+	font-size: 25px;
+}
+
+p {
+	font-family: "Poppins";
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+	margin-left:30px;
+	margin-top:16px;
+}
+
+a {
+	margin: 0; !important;
+}
+
+button {
+	border:none;
+	color: black;
+	background-color: white;
+	outline: none;
+}
+
+button:hover {
+	border:none;
+	color:grey;
+}
+
+button:active {
+	border:none;
+}
+
+/*navigation bar*/
+.nav{
+	/* mobile first */
+	position: absolute;
+	right:101%;
+	width: 100%;
+	height:100%;
+	z-index: 10;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.nav.is-visible{
+	position: absolute;
+	right:0%;
+	width: 100%;
+	height:100%; 
+	z-index: 10;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.nav_left{
+	position:absolute;
+	background-color: grey;
+	top:0%;
+	width: 16%;
+	height:100%;
+	left:0%;
+	z-index: 11;
+}
+
+.nav_right{
+	background-color: #31354e;
+	opacity: 0.95;
+	position: absolute;
+	top: 0;
+	width: 85%;
+	height: 100%;
+	right: 0;
+	margin: auto;
+	border-collapse: collapse;
+}
+
+.nav_button:hover{
+	background-color:#26293c;
+}
+
+.nav_row {
+	left: 0;
+	top: 0;
+	height: 50%;
+	width: 100%;
+	clear: both;
+	position: relative;
+}
+
+.nav_col {
+	height: 100%;
+	width: 33%;
+	position: relative;
+	border: 1px solid grey;
+	float: left;
+	left: 1%;
+	text-align: center;
+}
+
+.nav_content {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.nav_icon {
+	width: 90px;
+}
+
+#nav_iam_icon{
+	width:200px;
+}
+
+#nav_disappear{
+	position: absolute;
+	top: 10%;
+	width: 100%;
+	background-color: grey;
+}
+
+#nav_trigger {
+	position: absolute;
+	top:8%;
+	left:6%;
+}
+
+.nav_menu{
+	width:50px; 
+}
+
+/*logo*/
+#logo {
+	width: 10%;
+	top:18%;
+	left:50%;
+	position: absolute;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index:2;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#logo > img {
+	width:100%;
+}
+
+/*home*/
+#whole_page {
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	position: absolute;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background-color: #9CD3DB;
+	z-index: 0;
+	float: left;
+	position: absolute;
+}
+
+#links{
+	width:100%;
+	bottom:18%;
+	color:white;
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+	font-size: 20px;
+}
+
+#links a {
+	font-family: "Open Sans", "san-serif";
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*two column structure*/
+.left_column{
+	float:left;
+	width: 50%;
+	height: 100%;
+}
+
+.right_column{
+	float: right;
+	width: 50%;
+	height: 100%;
+}
+
+.content{
+	width: 80%;
+	top: 50%;
+	position: relative;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	clear: both;
+	margin: auto;
+	padding:0;
+}
+
+.left_title{
+	position: relative;
+	top: 60%;
+	margin: auto;
+}
+
+.left_title h1{
+	font-weight: 700;
+}
+
+.buttons{
+	margin-top: 0px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.buttons a {
+	text-decoration: none;
+	border:none;
+	color: black;
+	background-color: white;
+	outline: none;
+	cursor: pointer;
+}
+
+.buttons a:hover {
+	color: grey;
+}
+
+#photo {
+	width:500px;
+	height:250px;
+	margin:30px;
+	background-color:grey;
+}
+
+.content_details {
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+	display: none;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+/*client*/
+#client_icons{
+	position: relative;
+	top: 50%;
+	height: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.client_row {
+	width: 100%;
+	height: 25%;
+	clear: both;
+	position: relative;
+}
+
+.client_col {
+	height: 100%;
+	width: 33%;
+	position: relative;
+	float: left;
+	text-align: center;
+}
+
+.client_icon{
+	margin: 12px;
+	width: 60%;
+}
+
+/*team & career*/
+#team_content {
+	width: 100%;
+}
+
+#team_content img {
+	width: 90%;
+}
+
+#team_content h3 {
+	margin-right: 5%;
+}
+
+#team_content p {
+	margin-right: 5%;
+}
+
+#team_ae {
+	visibility: visible;
+	display: block;
+}
+
+/*career*/
+#career_content {
+	width: 95%;
+	left:50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	position: relative;
+}
+
+#career_content h2 {
+	color: white;
+	font-size: 20px;
+	margin: 0;
+}
+
+#career_content h3 {
+	text-align: left;
+	font-size: 18px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#career_content h4 {
+	text-align: left;
+	font-size: 15px;
+	padding: 0;
+}
+
+#career_content p {
+	font-size: 13px;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 5px 0;
+	text-align: left;
+}
+
+.position_list {
+	margin: 30px 0;
+	padding: 0;
+}
+
+.position_list > li {
+	list-style-type: none;
+	border: 1px solid white;
+	padding: 10px;
+}
+
+.position_list li {
+	text-align: left;
+	font-size: 13px;
+	color: white;
+	margin: 0;
+	cursor:pointer;
+}
+
+.position_content {
+	display: none;
+	visibility: visible;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#ae_ae .position_content {
+	visibility: visible;
+	display: block;
+}
+
+.application {
+	width: 100%;
+	text-align: center;
+	margin-top: 4%;
+}
+
+#application1, #application2{
+	color: black;
+	font-size: 12px;
+	font-family: "Poppins";
+	font-weight: 300;
+}
+
+#career_ae {
+	visibility: visible;
+	display: block;
+}
+/*contact*/
+#contact_content p {
+	font-size: 1.3em;
+	text-align: center;
+	margin-right: 5%;
+	margin-bottom: 50px;
+}
+
+#contact_content h4 {
+	text-align: center;
+	margin: 0;
+}

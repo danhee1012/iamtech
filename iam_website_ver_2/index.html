@@ -1,0 +1,220 @@
+<!--
+index.html
+IAM Main Website Ver 2
+Tech Team Director: Christopher Choi
+UI/UX Designer: Sarah Minkyoung Cho
+Web Developer: Lijin Guo
+-->
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>IAM</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Poppins:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="js/angularApp.js"></script>
+		<script src="js/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+		<link href="css/style.css" rel="stylesheet">
+	</head>  	
+
+	<body ng-app="IAM" ng-controller="MainCtrl">
+		<div class="nav">
+			<div class="nav_left">
+				<button id="nav_disappear"><img height="30px" width="50px" src="img/nav/arrow.png"></button>
+			</div>
+			<div class="nav_right">
+				<div class="nav_row">
+					<a class="nav_button" href="#/home"><div class="nav_col"><div class="nav_content"><img id="nav_iam_icon" src="img/nav/iam_logo_white.png"></div></div></a>
+					<a class="nav_button" href="#/about"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/about.png"><h4 align="center">About Us</h4></div></div></a>
+					<a class="nav_button" href="#/team"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/team.png"><h4 align="center">The Team</h4></div></div></a>
+				</div>
+				<div class="nav_row">
+					<a class="nav_button" href="#/clients"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/client.png"><h4 align="center">Clients</h4></div></div></a>
+					<a class="nav_button" href="#/careers"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/careers.png"><h4 align="center">Careers</h4></div></div></a>
+					<a class="nav_button" href="#/contact"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/conatct.png"><h4 align="center">Contact</h4></div></div></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="logo"><img class="" src="img/logo_white_background.png"></div>
+
+		<div data-ui-view id="whole_page"></div>
+
+		<script type="text/ng-template" id="/home.html">
+			<div class ="wrapper" id="home">
+				<div id ="links">
+
+					<a href="#/about">About Us</a> / <a href="#/team">The Team</a> / <a href="#/clients">Clients</a> / <a href="#/careers">Careers</a> / <a href="#/contact">Contact</a>
+
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/about.html">
+			<div class="left_column">
+				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu1.png"></button>
+				<div class="left_title">
+					<h1>About Us</h1>
+				</div>
+			</div>
+
+			<div class="right_column" style="background-color: #F4A8F2;">
+				<div class ="content">
+					<h2>YOU PRESENT, WE SOLVE.</h2>
+					<p>International Advertising Mob consists of some of the brightest and most innovative minds on campus at the University of Illinois at Urbana-Champaign. IAM offers free advertising and marketing consulting to our local international stores, utilizing our knowledge and imagination to the full extent.
+						<br><br>
+						We take a multidisciplinary approach to working on our clients’ business with our staff members coming from various scholarly backgrounds ranging from web designers to writers, psychologists, artists, mathematicians, and engineers. In our interactive environment, we work side by side, acquiring practical expertise in the field as projects continue.
+						<br><br>
+						You present your business, we present solutions—solutions to better the world. IAM not only provides solutions for your business but also helps out the community. Currently a World Vision child sponsor, IAM dedicates all profits from fund raisers and projects to children in need. At IAM, we present solutions to the world by participating in various charitable foundations.
+					</p>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/careers.html">
+			<div class="left_column">
+				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu5.png"></button>
+				<div class="left_title">
+					<h1>Careers</h1>
+					<br>
+					<div id="career_button" class="buttons">
+						<a id="career_button_{{careers[0].id}}">Account Executive</a> / 
+						<a id="career_button_{{careers[1].id}}">Business</a> / 
+						<a id="career_button_{{careers[2].id}}">Creative</a> /
+						<br>
+						<a id="career_button_{{careers[3].id}}">Internal</a> / 
+						<a id="career_button_{{careers[4].id}}">Media</a> / 
+						<a id="career_button_{{careers[5].id}}">Tech</a> / 
+						<a id="career_button_{{careers[6].id}}">China</a>
+					</div>
+
+					<div class="application">
+						<a id ="application1" href="">Click here for online Application and more information (IAM KOREA)</a>
+						<br>
+						<a id ="application2" href="">Click here for online Application and more information (IAM CHINA)</a>	
+					</div>
+				</div>
+			</div>
+
+			<div class="right_column" style="background-color: #FBB040;">
+				<div class="content">
+					<div ng-repeat="career in careers" class="info" id="career_content">
+						<div id="career_{{career.id}}" class="content_details">
+							<h2>{{career.team_name}}</h2>
+							<p ng-repeat="cont in career.contents">{{cont}}</p>
+
+							<ul class="position_list">
+								<li id="{{pos.position_id}}" ng-repeat="pos in career.positions" class="position_list_button">
+									<h3>{{pos.position_name}}</h3>
+									<div class="position_content">
+										<h4>Job Description</h4>
+										<ul>
+											<li ng-repeat="dscrptn in pos.description">{{dscrptn}}</li>
+										</ul>
+										<h4>Preferred Personalities / Skills</h4>
+										<ul>
+											<li ng-repeat="p_r in pos.pre_req">{{p_r}}</li>
+										</ul>
+										<br>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/clients.html">
+			<div class="left_column">
+				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png"></button>
+				<div class="left_title">
+					<h1>Clients</h1>
+				</div>
+			</div>
+
+			<div class="right_column" style="background-color: #9CD3DB;">
+				<div class="content" id="client_icons">
+					<div class="client_row">
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_artbox.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_blink.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_caffebene.png"></div>
+					</div>
+					<div class="client_row">
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_cu_asian_times.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_dear72.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_marymond.png"></div>
+					</div>
+					<div class="client_row">
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_mtour_us.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_orange_leaf.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_shinval.png"></div>
+					</div>
+					<div class="client_row">
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_sts.png"></div>
+						<div class="client_col"></div>
+						<div class="client_col"></div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/team.html">
+			<div class="left_column">
+				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu2.png"></button>
+				<div class="left_title">
+					<h1>The Team</h1>
+					<br>
+					<div id="team_button" class="buttons">
+						<a id="team_button_{{teams[0].id}}">Account Executive</a> / 
+						<a id="team_button_{{teams[1].id}}">Business</a> / 
+						<a id="team_button_{{teams[2].id}}">Creative</a> /
+						<br>
+						<a id="team_button_{{teams[3].id}}">Internal</a> / 
+						<a id="team_button_{{teams[4].id}}">Media</a> / 
+						<a id="team_button_{{teams[5].id}}">Tech</a> / 
+						<a id="team_button_{{teams[6].id}}">China</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="right_column" style="background-color: #5F7AFF;">
+				<div class="content">
+					<div ng-repeat="team in teams" class="info" id="team_content">
+						<div id="team_{{team.id}}" class="content_details">
+							<img ng-src="{{team.image}}">
+							<h3>{{team.name}}</h3>
+							<p>
+								{{team.content}}
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/ng-template" id="/contact.html">
+			<div class="left_column">
+				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png"></button>
+				<div class="left_title">
+					<h1>Contact Us</h1>
+				</div>
+			</div>
+
+			<div class="right_column" style="background-color: #9CD3DB;">
+				<div class="content">
+					<div id="contact_content">
+						<h4>Email us</h4>
+						<p>iamuiuc@gmail.com</p>
+						<h4>Call us</h4>
+						<p>1 (224) 875-0441</p>
+					</div>
+				</div>
+			</div>
+		</script>
+	</body>
+</html>
