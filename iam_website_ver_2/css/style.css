@@ -16,7 +16,7 @@ body {
 h1 {
 	text-align: center;
 	font-family: "Open Sans", "san-serif";
-	font-size: 50px;
+	font-size: 60px;
 	font-weight: 800;
 	margin-bottom: 0px;
 }
@@ -72,8 +72,103 @@ button:active {
 }
 
 /*navigation bar*/
+.nav2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: -200%;
+	z-index: 10;
+	color: black;
+}
+
+.nav2_black {
+	height: -moz-calc(100% - 200px);
+	height: -webkit-calc(100% - 200px);
+	height: -o-calc(100% - 200px);
+	height: calc(100% - 200px);
+	background-color: black;
+	opacity: 0.7;
+}
+
+.nav2_row {
+	width: 100%;
+	height: 200px;
+	clear: both;
+	background-color: rgba(249, 249, 250, 0.7);
+	display: table;
+}
+
+.nav2_row a {
+	color: transparent;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	height: 200px;
+}
+
+.nav2_row a:hover {
+	color: transparent;
+}
+
+.nav2_col {
+	width: 16.55%;
+	height: 200px;
+	border-right: 1px solid #e1e2e5;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	float: left;
+}
+
+.nav2_col h4 {
+	padding: 0;
+	border: 0;
+	margin: 0;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	top: 0;
+}
+
+.nav2_col img {
+	width: 100px;
+	padding: 0;
+	border: 0;
+	position: relative;
+}
+
+.nav2_content {
+	position: relative;
+	top: 45%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.nav2.is-visible{
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	z-index: 10;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#nav_icon_home {
+	width: 50%;
+	opacity 1;
+}
+
+#nav_icon_home + h4 {
+	display: none;
+}
+
+/*navigation bar
 .nav{
-	/* mobile first */
 	position: absolute;
 	right:101%;
 	width: 100%;
@@ -150,6 +245,8 @@ button:active {
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+	width: 100%;
+	height: 100%;
 }
 
 .nav_icon {
@@ -167,15 +264,16 @@ button:active {
 	background-color: grey;
 }
 
-#nav_trigger {
+.nav_trigger {
 	position: absolute;
-	top:8%;
-	left:6%;
+	top:5.5%;
+	left:5%;
 }
 
 .nav_menu{
 	width:50px; 
 }
+*/
 
 /*logo*/
 #logo {
@@ -210,7 +308,7 @@ button:active {
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
-	background-color: #9CD3DB;
+	//background:  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAATElEQVQYV2NkQAIzL/+vh3HTdRkbkeUY6aMQZO3n/zPhzgDZyrgYSSCWMR3uLrwKQTpxKUYxEabw/+bNYGsZfX3hNqD4GiQJU0R7hQDJ8zUpbrzSjwAAAABJRU5ErkJggg==) repeat;
 	z-index: 0;
 	float: left;
 	position: absolute;
@@ -223,7 +321,9 @@ button:active {
 	position: absolute;
 	text-align: center;
 	overflow: hidden;
-	font-size: 20px;
+	font-size: 25px;
+	margin-bottom: 100px;
+	font-weight: 700;
 }
 
 #links a {
@@ -254,12 +354,12 @@ button:active {
 	transform: translateY(-50%);
 	clear: both;
 	margin: auto;
-	padding:0;
+	padding: 0;	
 }
 
 .left_title{
 	position: relative;
-	top: 60%;
+	top: 23%;
 	margin: auto;
 }
 
@@ -270,7 +370,7 @@ button:active {
 .buttons{
 	margin-top: 0px;
 	font-weight: 700;
-	text-align: center;
+	text-align: left;
 }
 
 .buttons a {
@@ -280,6 +380,11 @@ button:active {
 	background-color: white;
 	outline: none;
 	cursor: pointer;
+	clear: both;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .buttons a:hover {
@@ -295,7 +400,7 @@ button:active {
 
 .content_details {
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	visibility: hidden;
 	display: none;
 	-webkit-transition: all 1s ease;
@@ -304,6 +409,25 @@ button:active {
 	-ms-transition: all 1s ease;
 	transition: all 1s ease;
 }
+
+/*about*/
+.about_details {
+	width: 100%;
+	text-align: left;
+	visibility: hidden;
+	display: none;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+#about_aboutiam {
+	visibility: visible;
+	display: block;
+}
+
 
 /*client*/
 #client_icons{
@@ -341,7 +465,8 @@ button:active {
 }
 
 #team_content img {
-	width: 90%;
+	width: 80%;
+	margin-bottom: 200px;
 }
 
 #team_content h3 {

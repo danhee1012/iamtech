@@ -50,6 +50,33 @@ app.controller('MainCtrl', [
 			}
 		});
 
+		$scope.aboutus = [
+			{id: 'aboutiam', 
+			 name: 'YOU PRESENT, WE SOLVE.', 
+			 content:
+			 [
+				 'International Advertising Mob consists of some of the brightest and most innovative minds on campus at the University of Illinois at Urbana-Champaign. IAM offers free advertising and marketing consulting to our local international stores, utilizing our knowledge and imagination to the full extent.',
+				 'We take a multidisciplinary approach to working on our clients\' business with our staff members coming from various scholarly backgrounds ranging from web designers to writers, psychologists, artists, mathematicians, and engineers. In our interactive environment, we work side by side, acquiring practical expertise in the field as projects continue. ',
+				 'You present your business, we present solutions—solutions to better the world. IAM not only provides solutions for your business but also helps out the community. Currently a World Vision child sponsor, IAM dedicates all profits from fund raisers and projects to children in need. At IAM, we present solutions to the world by participating in various charitable foundations.'
+			 ]
+			},
+			{id: 'intro', 
+			 name: 'Introduction', 
+			 content:
+			 [
+				 'I am Ju Young Choi, founder and president of International Advertising Mob.',
+				 'It\' not about my intelligence,\nIt\'s not about my advertising background, and\n It\'s not about showcasing my pride.',
+				 'These are what I really stand for- values that define who IAM and what IAM.',
+				 'I influence.\nI provide solutions and contents that can lead the world.',
+				 'I contribute.\nI don’t stop at acquiring academic knowledge and contribute to the world.',
+				 'I don’t stagnate.\nI continue to face my problems and fix them through communicating with experts.',
+				 'I challenge.\nI challenge not for personal benefits, but for those in need.\nLast but not least, I challenge with those who share the warmth.',
+				 'IAM happy everyday.'
+			 ]
+			},
+		];
+
+
 		$scope.teams = [
 			{id: 'ae', name: 'ACCOUNT EXECUTIVE', image: 'img/team_photo/ae.jpg', content:'The brains. The researchers. The compass.'},
 			{id: 'business', name: 'BUSINESS', image: 'img/team_photo/business.jpg', content:'The postmen. A pack of wolves. The activists.'},
@@ -58,6 +85,15 @@ app.controller('MainCtrl', [
 			{id: 'media', name: 'MEDIA', image: 'img/team_photo/media.jpg', content:'The postmen. A pack of wolves. The activists.'},
 			{id: 'tech', name: 'TECH', image: 'img/team_photo/creative-developer.jpg', content:'The brains. The researchers. The compass.'},
 			{id: 'china', name: 'CHINA', image: 'img/team_photo/china.jpg', content:'The brains. The researchers. The compass.'}
+		];
+
+		$scope.navs = [
+			{id: "home", image: "img/nav/icon_iam.png", content: "About Us"},
+			{id: "about", image: "img/nav/icon_about.png", content: "About Us"},
+			{id: "team", image: "img/nav/icon_team.png", content: "The Team"},
+			{id: "careers", image: "img/nav/icon_careers.png", content: "Careers"},
+			{id: "clients", image: "img/nav/icon_clients.png", content: "Clients"},
+			{id: "contact", image: "img/nav/icon_contact.png", content: "Contact"}
 		];
 
 		$scope.careers = [

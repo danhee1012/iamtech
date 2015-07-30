@@ -13,39 +13,53 @@ Web Developer: Lijin Guo
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href='http://fonts.googleapis.com/css?family=Poppins:400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<link href="css/style.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 		<script src="js/angularApp.js"></script>
 		<script src="js/script.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-		<link href="css/style.css" rel="stylesheet">
 	</head>  	
 
 	<body ng-app="IAM" ng-controller="MainCtrl">
-		<div class="nav">
-			<div class="nav_left">
-				<button id="nav_disappear"><img height="30px" width="50px" src="img/nav/arrow.png"></button>
+		<!--<div class="nav">
+<div class="nav_left">
+<button id="nav_disappear"><img height="30px" width="50px" src="img/nav/arrow.png"></button>
+</div>
+<div class="nav_right">
+<div class="nav_row">
+<a class="nav_button" href="#/home"><div class="nav_col"><div class="nav_content"><img id="nav_iam_icon" src="img/nav/iam_logo_white.png"></div></div></a>
+<a class="nav_button" href="#/about"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/icon_about.png"><h4 align="center">About Us</h4></div></div></a>
+<a class="nav_button" href="#/team"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/icon_team.png"><h4 align="center">The Team</h4></div></div></a>
+</div>
+<div class="nav_row">
+<a class="nav_button" href="#/clients"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/icon_clients.png"><h4 align="center">Clients</h4></div></div></a>
+<a class="nav_button" href="#/careers"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/icon_careers.png"><h4 align="center">Careers</h4></div></div></a>
+<a class="nav_button" href="#/contact"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/icon_contact.png"><h4 align="center">Contact</h4></div></div></a>
+</div>
+</div>
+</div>-->
+
+		<div class="nav2">
+			<div class="nav2_row">
+				<a ng-repeat="nav in navs" href="#{{ nav.id }}" class="nav2_button">
+					<div class="nav2_col">
+						<div class="nav2_content">
+							<img id="nav_icon_{{nav.id}}" ng-src="{{ nav.image }}">
+							<h4>{{ nav.content }}</h4>
+						</div>
+					</div>
+				</a>
 			</div>
-			<div class="nav_right">
-				<div class="nav_row">
-					<a class="nav_button" href="#/home"><div class="nav_col"><div class="nav_content"><img id="nav_iam_icon" src="img/nav/iam_logo_white.png"></div></div></a>
-					<a class="nav_button" href="#/about"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/about.png"><h4 align="center">About Us</h4></div></div></a>
-					<a class="nav_button" href="#/team"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/team.png"><h4 align="center">The Team</h4></div></div></a>
-				</div>
-				<div class="nav_row">
-					<a class="nav_button" href="#/clients"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/client.png"><h4 align="center">Clients</h4></div></div></a>
-					<a class="nav_button" href="#/careers"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/careers.png"><h4 align="center">Careers</h4></div></div></a>
-					<a class="nav_button" href="#/contact"><div class="nav_col"><div class="nav_content"><img class="nav_icon" src="img/nav/conatct.png"><h4 align="center">Contact</h4></div></div></a>
-				</div>
-			</div>
+			<div class="nav2_black"></div>
 		</div>
 
 		<div id="logo"><img class="" src="img/logo_white_background.png"></div>
 
 		<div data-ui-view id="whole_page"></div>
 
-		<script type="text/ng-template" id="/home.html">
-			<div class ="wrapper" id="home">
+		<script type="text/ng-template" id="/home.html" >
+			<div class ="wrapper" id="home" style="background-color: #9CD3DB;">
 				<div id ="links">
 
 					<a href="#/about">About Us</a> / <a href="#/team">The Team</a> / <a href="#/clients">Clients</a> / <a href="#/careers">Careers</a> / <a href="#/contact">Contact</a>
@@ -55,41 +69,48 @@ Web Developer: Lijin Guo
 		</script>
 
 		<script type="text/ng-template" id="/about.html">
-			<div class="left_column">
-				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu1.png"></button>
+			<div class="left_column" id="about_left_bg">
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu2.png"></button>
 				<div class="left_title">
 					<h1>About Us</h1>
+					<br>
+					<div id="about_button" class="buttons">
+						<a id="about_button_{{aboutus[0].id}}">/ About IAM</a>
+						<br>
+						<a id="about_button_{{aboutus[1].id}}">/ Introduction</a>
+					</div>
 				</div>
 			</div>
 
-			<div class="right_column" style="background-color: #F4A8F2;">
+			<div class="right_column" id="about_right_bg" style="background-color: #f79f9f;">
 				<div class ="content">
-					<h2>YOU PRESENT, WE SOLVE.</h2>
-					<p>International Advertising Mob consists of some of the brightest and most innovative minds on campus at the University of Illinois at Urbana-Champaign. IAM offers free advertising and marketing consulting to our local international stores, utilizing our knowledge and imagination to the full extent.
-						<br><br>
-						We take a multidisciplinary approach to working on our clients’ business with our staff members coming from various scholarly backgrounds ranging from web designers to writers, psychologists, artists, mathematicians, and engineers. In our interactive environment, we work side by side, acquiring practical expertise in the field as projects continue.
-						<br><br>
-						You present your business, we present solutions—solutions to better the world. IAM not only provides solutions for your business but also helps out the community. Currently a World Vision child sponsor, IAM dedicates all profits from fund raisers and projects to children in need. At IAM, we present solutions to the world by participating in various charitable foundations.
-					</p>
+					<div ng-repeat="about in aboutus" class="info" id="about_content">
+						<div id="about_{{about.id}}" class="content_details">
+							<h3>{{about.name}}</h3>
+							<p ng-repeat="cntnt in about.content">
+								{{cntnt}}
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</script>
 
 		<script type="text/ng-template" id="/careers.html">
 			<div class="left_column">
-				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu5.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu5.png"></button>
 				<div class="left_title">
 					<h1>Careers</h1>
 					<br>
 					<div id="career_button" class="buttons">
-						<a id="career_button_{{careers[0].id}}">Account Executive</a> / 
-						<a id="career_button_{{careers[1].id}}">Business</a> / 
-						<a id="career_button_{{careers[2].id}}">Creative</a> /
+						<a id="career_button_{{careers[0].id}}">/ Account Executive</a>
+						<a id="career_button_{{careers[1].id}}">/ Business</a>
+						<a id="career_button_{{careers[2].id}}">/ Creative</a>
 						<br>
-						<a id="career_button_{{careers[3].id}}">Internal</a> / 
-						<a id="career_button_{{careers[4].id}}">Media</a> / 
-						<a id="career_button_{{careers[5].id}}">Tech</a> / 
-						<a id="career_button_{{careers[6].id}}">China</a>
+						<a id="career_button_{{careers[3].id}}">/ Internal</a>
+						<a id="career_button_{{careers[4].id}}">/ Media</a>
+						<a id="career_button_{{careers[5].id}}">/ Tech</a>
+						<a id="career_button_{{careers[6].id}}">/ China</a>
 					</div>
 
 					<div class="application">
@@ -100,7 +121,7 @@ Web Developer: Lijin Guo
 				</div>
 			</div>
 
-			<div class="right_column" style="background-color: #FBB040;">
+			<div class="right_column" style="background-color: #ffcc5c;">
 				<div class="content">
 					<div ng-repeat="career in careers" class="info" id="career_content">
 						<div id="career_{{career.id}}" class="content_details">
@@ -131,13 +152,13 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/clients.html">
 			<div class="left_column">
-				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu4.png"></button>
 				<div class="left_title">
 					<h1>Clients</h1>
 				</div>
 			</div>
 
-			<div class="right_column" style="background-color: #9CD3DB;">
+			<div class="right_column" style="background-color: #96ceb4;">
 				<div class="content" id="client_icons">
 					<div class="client_row">
 						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_artbox.png"></div>
@@ -156,8 +177,8 @@ Web Developer: Lijin Guo
 					</div>
 					<div class="client_row">
 						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_sts.png"></div>
-						<div class="client_col"></div>
-						<div class="client_col"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_dt.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_smg.png"></div>
 					</div>
 				</div>
 			</div>
@@ -165,7 +186,7 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/team.html">
 			<div class="left_column">
-				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu2.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu3.png"></button>
 				<div class="left_title">
 					<h1>The Team</h1>
 					<br>
@@ -182,7 +203,7 @@ Web Developer: Lijin Guo
 				</div>
 			</div>
 
-			<div class="right_column" style="background-color: #5F7AFF;">
+			<div class="right_column" style="background-color: #ffeead;">
 				<div class="content">
 					<div ng-repeat="team in teams" class="info" id="team_content">
 						<div id="team_{{team.id}}" class="content_details">
@@ -199,13 +220,13 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/contact.html">
 			<div class="left_column">
-				<button id="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png"></button>
 				<div class="left_title">
 					<h1>Contact Us</h1>
 				</div>
 			</div>
 
-			<div class="right_column" style="background-color: #9CD3DB;">
+			<div class="right_column" style="background-color: #e1e2e5;">
 				<div class="content">
 					<div id="contact_content">
 						<h4>Email us</h4>
