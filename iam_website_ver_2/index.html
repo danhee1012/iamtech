@@ -7,6 +7,7 @@ Web Developer: Lijin Guo
 -->
 <!doctype html>
 <html lang="en">
+
 	<head>
 		<title>IAM</title>
 		<meta charset="UTF-8">
@@ -19,7 +20,7 @@ Web Developer: Lijin Guo
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 		<script src="js/angularApp.js"></script>
 		<script src="js/script.js"></script>
-	</head>  	
+	</head>
 
 	<body ng-app="IAM" ng-controller="MainCtrl">
 		<!--<div class="nav">
@@ -40,27 +41,28 @@ Web Developer: Lijin Guo
 </div>
 </div>-->
 
-		<div class="nav2">
-			<div class="nav2_row">
-				<a ng-repeat="nav in navs" href="#{{ nav.id }}" class="nav2_button">
-					<div class="nav2_col">
-						<div class="nav2_content">
+		<div class="nav">
+			<div class="nav_row">
+				<a ng-repeat="nav in navs" href="#{{ nav.id }}" class="nav_button">
+					<div class="nav_col">
+						<div class="nav_content">
 							<img id="nav_icon_{{nav.id}}" ng-src="{{ nav.image }}">
 							<h4>{{ nav.content }}</h4>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="nav2_black"></div>
+			<div class="nav_black"></div>
 		</div>
 
-		<div id="logo"><img class="" src="img/logo_white_background.png"></div>
+		<div id="logo"><img class="" src="img/logo_white_background.png">
+		</div>
 
 		<div data-ui-view id="whole_page"></div>
 
-		<script type="text/ng-template" id="/home.html" >
-			<div class ="wrapper" id="home" style="background-color: #9CD3DB;">
-				<div id ="links">
+		<script type="text/ng-template" id="/home.html">
+			<div class="wrapper" id="home" style="background-color: #9CD3DB;">
+				<div id="links">
 
 					<a href="#/about">About Us</a> / <a href="#/team">The Team</a> / <a href="#/clients">Clients</a> / <a href="#/careers">Careers</a> / <a href="#/contact">Contact</a>
 
@@ -70,20 +72,24 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/about.html">
 			<div class="left_column" id="about_left_bg">
-				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu2.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu2.png">
+				</button>
 				<div class="left_title">
-					<h1>About Us</h1>
-					<br>
-					<div id="about_button" class="buttons">
-						<a id="about_button_{{aboutus[0].id}}">/ About IAM</a>
+					<div class="left_content">
+						<h1>About Us</h1>
 						<br>
-						<a id="about_button_{{aboutus[1].id}}">/ Introduction</a>
+						<div id="about_button" class="buttons">
+							<p><a id="about_button_{{aboutus[0].id}}">/ About IAM</a>
+							</p>
+							<p><a id="about_button_{{aboutus[1].id}}">/ Introduction</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="right_column" id="about_right_bg" style="background-color: #f79f9f;">
-				<div class ="content">
+				<div class="content">
 					<div ng-repeat="about in aboutus" class="info" id="about_content">
 						<div id="about_{{about.id}}" class="content_details">
 							<h3>{{about.name}}</h3>
@@ -98,25 +104,27 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/careers.html">
 			<div class="left_column">
-				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu5.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu5.png">
+				</button>
 				<div class="left_title">
-					<h1>Careers</h1>
-					<br>
-					<div id="career_button" class="buttons">
-						<a id="career_button_{{careers[0].id}}">/ Account Executive</a>
-						<a id="career_button_{{careers[1].id}}">/ Business</a>
-						<a id="career_button_{{careers[2].id}}">/ Creative</a>
+					<div class="left_content">
+						<h1>Careers</h1>
 						<br>
-						<a id="career_button_{{careers[3].id}}">/ Internal</a>
-						<a id="career_button_{{careers[4].id}}">/ Media</a>
-						<a id="career_button_{{careers[5].id}}">/ Tech</a>
-						<a id="career_button_{{careers[6].id}}">/ China</a>
-					</div>
+						<div id="career_button" class="buttons">
+							<p>/<a id="career_button_{{careers[0].id}}"> Account Executive</a></p>
+							<p>/<a id="career_button_{{careers[1].id}}"> Business</a></p>
+							<p>/<a id="career_button_{{careers[2].id}}"> Creative</a></p>
+							<p>/<a id="career_button_{{careers[3].id}}"> Internal</a></p>
+							<p>/<a id="career_button_{{careers[4].id}}"> Media</a></p>
+							<p>/<a id="career_button_{{careers[5].id}}"> Tech</a></p>
+							<p>/<a id="career_button_{{careers[6].id}}"> China</a></p>
+						</div>
 
-					<div class="application">
-						<a id ="application1" href="">Click here for online Application and more information (IAM KOREA)</a>
-						<br>
-						<a id ="application2" href="">Click here for online Application and more information (IAM CHINA)</a>	
+						<div class="application">
+							<a id="application1" href="">Click here for online Application and more information (IAM KOREA)</a>
+							<br>
+							<a id="application2" href="">Click here for online Application and more information (IAM CHINA)</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -152,7 +160,8 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/clients.html">
 			<div class="left_column">
-				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu4.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu4.png">
+				</button>
 				<div class="left_title">
 					<h1>Clients</h1>
 				</div>
@@ -161,24 +170,36 @@ Web Developer: Lijin Guo
 			<div class="right_column" style="background-color: #96ceb4;">
 				<div class="content" id="client_icons">
 					<div class="client_row">
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_artbox.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_blink.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_caffebene.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_artbox.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_blink.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_caffebene.png">
+						</div>
 					</div>
 					<div class="client_row">
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_cu_asian_times.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_dear72.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_marymond.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_cu_asian_times.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_dear72.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_marymond.png">
+						</div>
 					</div>
 					<div class="client_row">
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_mtour_us.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_orange_leaf.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_shinval.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_mtour_us.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_orange_leaf.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_shinval.png">
+						</div>
 					</div>
 					<div class="client_row">
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_sts.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_dt.png"></div>
-						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_smg.png"></div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_sts.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_dt.png">
+						</div>
+						<div class="client_col"><img class="client_icon" src="img/client_logo/logo_smg.png">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -186,19 +207,28 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/team.html">
 			<div class="left_column">
-				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu3.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu3.png">
+				</button>
 				<div class="left_title">
-					<h1>The Team</h1>
-					<br>
-					<div id="team_button" class="buttons">
-						<a id="team_button_{{teams[0].id}}">Account Executive</a> / 
-						<a id="team_button_{{teams[1].id}}">Business</a> / 
-						<a id="team_button_{{teams[2].id}}">Creative</a> /
+					<div class="left_content">
+						<h1>The Team</h1>
 						<br>
-						<a id="team_button_{{teams[3].id}}">Internal</a> / 
-						<a id="team_button_{{teams[4].id}}">Media</a> / 
-						<a id="team_button_{{teams[5].id}}">Tech</a> / 
-						<a id="team_button_{{teams[6].id}}">China</a>
+						<div id="team_button" class="buttons">
+							<p>/<a id="team_button_{{teams[0].id}}"> Account Executive</a>
+							</p>
+							<p>/<a id="team_button_{{teams[1].id}}"> Business</a>
+							</p>
+							<p>/<a id="team_button_{{teams[2].id}}"> Creative</a>
+							</p>
+							<p>/<a id="team_button_{{teams[3].id}}"> Internal</a>
+							</p>
+							<p>/<a id="team_button_{{teams[4].id}}"> Media</a>
+							</p>
+							<p>/<a id="team_button_{{teams[5].id}}"> Tech</a>
+							</p>
+							<p>/<a id="team_button_{{teams[6].id}}"> China</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -220,7 +250,8 @@ Web Developer: Lijin Guo
 
 		<script type="text/ng-template" id="/contact.html">
 			<div class="left_column">
-				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png"></button>
+				<button class="nav_trigger"><img class="nav_menu" src="img/nav/menu6.png">
+				</button>
 				<div class="left_title">
 					<h1>Contact Us</h1>
 				</div>
@@ -238,4 +269,5 @@ Web Developer: Lijin Guo
 			</div>
 		</script>
 	</body>
+
 </html>

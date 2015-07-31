@@ -8,7 +8,7 @@ Web Developer: Lijin Guo
 
 body {
 	padding: 0 !important;
-	margin:0 !important;
+	margin: 0 !important;
 	font-family: "Open Sans";
 	overflow: hidden;
 }
@@ -33,12 +33,12 @@ h3 {
 	font-size: 15px;
 	font-weight: 800;
 	margin-left: 30px;
-	color:white;
+	color: white;
 }
 
 h4 {
 	font-family: "Open Sans", "san-serif";
-	color:white;
+	color: white;
 	font-size: 25px;
 }
 
@@ -47,32 +47,33 @@ p {
 	font-size: 14px;
 	font-weight: 300;
 	color: white;
-	margin-left:30px;
-	margin-top:16px;
+	margin-left: 30px;
+	margin-top: 16px;
 }
 
 a {
-	margin: 0; !important;
+	margin: 0;
+	!important;
 }
 
 button {
-	border:none;
+	border: none;
 	color: black;
 	background-color: white;
 	outline: none;
 }
 
 button:hover {
-	border:none;
-	color:grey;
+	border: none;
+	color: grey;
 }
 
 button:active {
-	border:none;
+	border: none;
 }
-
 /*navigation bar*/
-.nav2 {
+
+.nav {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -81,7 +82,7 @@ button:active {
 	color: black;
 }
 
-.nav2_black {
+.nav_black {
 	height: -moz-calc(100% - 200px);
 	height: -webkit-calc(100% - 200px);
 	height: -o-calc(100% - 200px);
@@ -90,7 +91,7 @@ button:active {
 	opacity: 0.7;
 }
 
-.nav2_row {
+.nav_row {
 	width: 100%;
 	height: 200px;
 	clear: both;
@@ -98,7 +99,7 @@ button:active {
 	display: table;
 }
 
-.nav2_row a {
+.nav_row a {
 	color: transparent;
 	padding: 0;
 	margin: 0;
@@ -106,11 +107,11 @@ button:active {
 	height: 200px;
 }
 
-.nav2_row a:hover {
+.nav_row a:hover {
 	color: transparent;
 }
 
-.nav2_col {
+.nav_col {
 	width: 16.55%;
 	height: 200px;
 	border-right: 1px solid #e1e2e5;
@@ -120,7 +121,7 @@ button:active {
 	float: left;
 }
 
-.nav2_col h4 {
+.nav_col h4 {
 	padding: 0;
 	border: 0;
 	margin: 0;
@@ -130,14 +131,14 @@ button:active {
 	top: 0;
 }
 
-.nav2_col img {
+.nav_col img {
 	width: 100px;
 	padding: 0;
 	border: 0;
 	position: relative;
 }
 
-.nav2_content {
+.nav_content {
 	position: relative;
 	top: 45%;
 	-webkit-transform: translateY(-50%);
@@ -146,7 +147,7 @@ button:active {
 	width: 100%;
 }
 
-.nav2.is-visible{
+.nav.is-visible {
 	position: absolute;
 	top: 0%;
 	width: 100%;
@@ -167,124 +168,124 @@ button:active {
 	display: none;
 }
 
+.nav_trigger {
+	position: absolute;
+	top: 5.5%;
+	left: 5%;
+}
+
+.nav_menu {
+	width: 50px;
+}
 /*navigation bar
 .nav{
-	position: absolute;
-	right:101%;
-	width: 100%;
-	height:100%;
-	z-index: 10;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
+position: absolute;
+right:101%;
+width: 100%;
+height:100%;
+z-index: 10;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
 }
 
 .nav.is-visible{
-	position: absolute;
-	right:0%;
-	width: 100%;
-	height:100%; 
-	z-index: 10;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
+position: absolute;
+right:0%;
+width: 100%;
+height:100%; 
+z-index: 10;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+-ms-transition: all 1s ease;
+transition: all 1s ease;
 }
 
 .nav_left{
-	position:absolute;
-	background-color: grey;
-	top:0%;
-	width: 16%;
-	height:100%;
-	left:0%;
-	z-index: 11;
+position:absolute;
+background-color: grey;
+top:0%;
+width: 16%;
+height:100%;
+left:0%;
+z-index: 11;
 }
 
 .nav_right{
-	background-color: #31354e;
-	opacity: 0.95;
-	position: absolute;
-	top: 0;
-	width: 85%;
-	height: 100%;
-	right: 0;
-	margin: auto;
-	border-collapse: collapse;
+background-color: #31354e;
+opacity: 0.95;
+position: absolute;
+top: 0;
+width: 85%;
+height: 100%;
+right: 0;
+margin: auto;
+border-collapse: collapse;
 }
 
 .nav_button:hover{
-	background-color:#26293c;
+background-color:#26293c;
 }
 
 .nav_row {
-	left: 0;
-	top: 0;
-	height: 50%;
-	width: 100%;
-	clear: both;
-	position: relative;
+left: 0;
+top: 0;
+height: 50%;
+width: 100%;
+clear: both;
+position: relative;
 }
 
 .nav_col {
-	height: 100%;
-	width: 33%;
-	position: relative;
-	border: 1px solid grey;
-	float: left;
-	left: 1%;
-	text-align: center;
+height: 100%;
+width: 33%;
+position: relative;
+border: 1px solid grey;
+float: left;
+left: 1%;
+text-align: center;
 }
 
 .nav_content {
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	width: 100%;
-	height: 100%;
+position: relative;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+width: 100%;
+height: 100%;
 }
 
 .nav_icon {
-	width: 90px;
+width: 90px;
 }
 
 #nav_iam_icon{
-	width:200px;
+width:200px;
 }
 
 #nav_disappear{
-	position: absolute;
-	top: 10%;
-	width: 100%;
-	background-color: grey;
+position: absolute;
+top: 10%;
+width: 100%;
+background-color: grey;
 }
 
-.nav_trigger {
-	position: absolute;
-	top:5.5%;
-	left:5%;
-}
-
-.nav_menu{
-	width:50px; 
-}
 */
-
 /*logo*/
+
 #logo {
 	width: 10%;
-	top:18%;
-	left:50%;
+	top: 18%;
+	left: 50%;
 	position: absolute;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-	z-index:2;
+	z-index: 2;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
@@ -293,10 +294,10 @@ button:active {
 }
 
 #logo > img {
-	width:100%;
+	width: 100%;
 }
-
 /*home*/
+
 #whole_page {
 	width: 100%;
 	height: 100%;
@@ -314,10 +315,10 @@ button:active {
 	position: absolute;
 }
 
-#links{
-	width:100%;
-	bottom:18%;
-	color:white;
+#links {
+	width: 100%;
+	bottom: 18%;
+	color: white;
 	position: absolute;
 	text-align: center;
 	overflow: hidden;
@@ -331,71 +332,86 @@ button:active {
 	color: #ffffff;
 	text-decoration: none;
 }
-
 /*two column structure*/
-.left_column{
-	float:left;
+
+.left_column {
+	float: left;
 	width: 50%;
 	height: 100%;
+
 }
 
-.right_column{
+.left_content {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.right_column {
 	float: right;
 	width: 50%;
 	height: 100%;
 }
 
-.content{
+.content {
 	width: 80%;
-	top: 50%;
+	top: 35%;
 	position: relative;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	clear: both;
 	margin: auto;
-	padding: 0;	
+	padding: 0;
 }
 
-.left_title{
+.left_title {
 	position: relative;
 	top: 23%;
 	margin: auto;
 }
 
-.left_title h1{
+.left_title h1 {
 	font-weight: 700;
+}
+
+.slash {
+	font-size: 10px;
 }
 
 .buttons{
 	margin-top: 0px;
-	font-weight: 700;
 	text-align: left;
+	width: 100%;
 }
 
-.buttons a {
-	text-decoration: none;
-	border:none;
+.buttons p {
 	color: black;
 	background-color: white;
+	text-decoration: none;
+	border: none;
+	margin: 0 0 5px 25%;
 	outline: none;
 	cursor: pointer;
 	clear: both;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
+	font-weight: 700;
+	font-size: 15px;
+	width: 50%;
 }
 
-.buttons a:hover {
+.buttons p a {
+	font-size: 20px;
+}
+
+.buttons p:hover {
 	color: grey;
 }
 
 #photo {
-	width:500px;
-	height:250px;
-	margin:30px;
-	background-color:grey;
+	width: 500px;
+	height: 250px;
+	margin: 30px;
+	background-color: grey;
 }
 
 .content_details {
@@ -411,6 +427,7 @@ button:active {
 }
 
 /*about*/
+
 .about_details {
 	width: 100%;
 	text-align: left;
@@ -427,10 +444,9 @@ button:active {
 	visibility: visible;
 	display: block;
 }
-
-
 /*client*/
-#client_icons{
+
+#client_icons {
 	position: relative;
 	top: 50%;
 	height: 50%;
@@ -454,38 +470,44 @@ button:active {
 	text-align: center;
 }
 
-.client_icon{
+.client_icon {
 	margin: 12px;
 	width: 60%;
 }
-
 /*team & career*/
+
 #team_content {
-	width: 100%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 #team_content img {
-	width: 80%;
-	margin-bottom: 200px;
+	width: 100%;
+	margin-bottom: 100px;
 }
 
 #team_content h3 {
-	margin-right: 5%;
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 20px;
 }
 
 #team_content p {
-	margin-right: 5%;
+	margin: 0;
+	font-size: 18px
 }
 
 #team_ae {
 	visibility: visible;
 	display: block;
 }
-
 /*career*/
+
 #career_content {
 	width: 95%;
-	left:50%;
+	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
@@ -537,7 +559,7 @@ button:active {
 	font-size: 13px;
 	color: white;
 	margin: 0;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .position_content {
@@ -561,7 +583,8 @@ button:active {
 	margin-top: 4%;
 }
 
-#application1, #application2{
+#application1,
+#application2 {
 	color: black;
 	font-size: 12px;
 	font-family: "Poppins";
@@ -573,6 +596,7 @@ button:active {
 	display: block;
 }
 /*contact*/
+
 #contact_content p {
 	font-size: 1.3em;
 	text-align: center;
